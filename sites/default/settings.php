@@ -311,7 +311,17 @@ if (!empty($_COOKIE['Drupal_visitor_SSOLogin'])) {
   $conf['cache'] = FALSE;
 }
  
+ $domain = ltrim(strtolower($_SERVER['HTTP_HOST']), 'a.');
+  $secure = !empty($GLOBALS['https']);
 
+  
+if (isset($_COOKIE['Drupal.visitor.SSOLogin'])) {
+		setcookie('Drupal.visitor.SSOLogin', '', time() - 3600, '/', $domain, $secure);
+}
+
+if (isset($_COOKIE['Drupal.visitor.SSOLogout'])) {
+	setcookie('Drupal.visitor.SSOLogout', '', time() - 3600, '/', $domain, $secure);
+}
 /**
  * Access control for update.php script.
  *
