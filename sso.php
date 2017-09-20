@@ -16,9 +16,8 @@ if (empty($_SERVER['HTTP_HOST'])) {
 // Example url (SSO script on subdomain): "a.firstsite.com"
 // Example url (SSO script in the Drupal directory): "firstsite.com/sso.php"
 $network = array(
-   'login-dev.numberonegamer.com/sso.php',
    'bank-dev.numberonegamer.com/sso.php',
-
+  
 );
 
 // An array of network domain names. The keys are potential origin host names
@@ -33,7 +32,7 @@ $network = array(
 // $cookie_name_strict = true;
 
 // Validate the query parameters and network size.
-if (!sso_validate_query_params() || count($network) < 2) {
+if (!sso_validate_query_params() || count($network) < 1) {
   exit;
 }
 
