@@ -306,7 +306,7 @@ $databases = array (
     ),
   ),
 );
-
+/*
 if (!empty($_COOKIE['Drupal_visitor_SSOLogin'])) {
   $conf['cache'] = FALSE;
 }
@@ -322,6 +322,9 @@ if (isset($_COOKIE['Drupal.visitor.SSOLogin'])) {
 if (isset($_COOKIE['Drupal.visitor.SSOLogout'])) {
 	setcookie('Drupal.visitor.SSOLogout', '', time() - 3600, '/', $domain, $secure);
 }
+*/
+
+
 /**
  * Access control for update.php script.
  *
