@@ -31,7 +31,7 @@ $network = array(
 // $cookie_name_strict = true;
 
 // Validate the query parameters and network size.
-if (!sso_validate_query_params() || count($network) < 1) {
+if (!sso_validate_query_params() || count($network) < 2) {
   exit;
 }
 
